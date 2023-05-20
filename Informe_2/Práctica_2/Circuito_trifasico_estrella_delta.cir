@@ -1,0 +1,23 @@
+* E:\Práctica_3\Circuito_trifasico_estrella_delta.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu May 18 10:53:45 2023
+
+
+
+** Analysis setup **
+.tran 0.1ms 68ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Circuito_trifasico_estrella_delta.net"
+.INC "Circuito_trifasico_estrella_delta.als"
+
+
+.probe
+
+
+.END

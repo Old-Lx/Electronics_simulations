@@ -1,0 +1,40 @@
+
+**** 05/18/23 10:58:00 *********** Evaluation PSpice (Nov 1999) **************
+
+ * E:\Prctica_3\Circuito_trifsico_estrella_estrella.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu May 18 10:32:14 2023
+
+
+
+** Analysis setup **
+.tran 0.1ms 68ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Circuito_trifsico_estrella_estrella.net"
+----------------------------------------------$
+ERROR -- Unable to open file
+.INC "Circuito_trifsico_estrella_estrella.als"
+
+
+----------------------------------------------$
+ERROR -- Unable to open file
+.probe
+
+
+.END
+

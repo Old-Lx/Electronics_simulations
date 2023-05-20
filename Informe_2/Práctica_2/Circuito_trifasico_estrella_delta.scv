@@ -1,0 +1,211 @@
+*version 9.1 335552269
+u 159
+R? 9
+V? 5
+HB? 6
+? 10
+C? 4
+L? 2
+@libraries
+@analysis
+.TRAN 1 0 0 0
++0 0.1ms
++1 68ms
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 PCBOARDS=PCB
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
+@setup
+unconnectedPins 0
+connectViaLabel 0
+connectViaLocalLabels 0
+NoStim4ExtIFPortsWarnings 1
+AutoGenStim4ExtIFPorts 1
+@index
+pageloc 1 0 3643 
+@status
+n 0 123:04:18:10:53:45;1684421625 e 
+s 0 123:04:18:10:55:17;1684421717 e 
+c 123:04:18:10:53:43;1684421623
+*page 1 0 970 720 iA
+@ports
+port 32 GND_EARTH 280 110 h
+@parts
+part 79 r 450 70 u
+a 0 sp 0 0 0 10 hlb 100 PART=r
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R6
+a 0 ap 9 0 15 0 hln 100 REFDES=R6
+a 0 u 13 0 15 25 hln 100 VALUE=600
+part 126 VSIN 280 50 h
+a 0 x 0:13 0 0 0 hln 100 PKGREF=V2
+a 1 xp 9 0 20 10 hcn 100 REFDES=V2
+a 1 u 0 0 0 0 hcn 100 AC=
+a 1 u 0 0 0 0 hcn 100 VOFF=0
+a 1 u 0 0 0 0 hcn 100 VAMPL=169.7
+a 1 u 0 0 0 0 hcn 100 FREQ=60H
+part 148 VSIN 210 110 v
+a 1 u 0 0 0 0 hcn 100 PHASE=-120
+a 0 x 0:13 0 0 0 hln 100 PKGREF=V1
+a 1 xp 9 0 20 10 hcn 100 REFDES=V1
+a 1 u 0 0 0 0 hcn 100 AC=
+a 1 u 0 0 0 0 hcn 100 VOFF=0
+a 1 u 0 0 0 0 hcn 100 VAMPL=169.7
+a 1 u 0 0 0 0 hcn 100 FREQ=60H
+part 127 VSIN 350 110 d
+a 1 u 0 0 0 0 hcn 100 PHASE=120
+a 0 x 0:13 0 0 0 hln 100 PKGREF=V3
+a 1 xp 9 0 20 10 hcn 100 REFDES=V3
+a 1 u 0 0 0 0 hcn 100 AC=
+a 1 u 0 0 0 0 hcn 100 VOFF=0
+a 1 u 0 0 0 0 hcn 100 VAMPL=169.7
+a 1 u 0 0 0 0 hcn 100 FREQ=60H
+part 81 r 460 110 v
+a 0 sp 0 0 0 10 hlb 100 PART=r
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R8
+a 0 ap 9 0 15 0 hln 100 REFDES=R8
+a 0 u 13 0 15 25 hln 100 VALUE=600
+part 80 r 400 110 v
+a 0 sp 0 0 0 10 hlb 100 PART=r
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R7
+a 0 ap 9 0 15 0 hln 100 REFDES=R7
+a 0 u 13 0 15 25 hln 100 VALUE=600
+part 1 titleblk 970 720 h
+a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
+a 1 s 13 0 180 60 hcn 100 PAGETITLE=
+a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
+part 153 vdiffMarker 400 70 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 6 20 hlb 100 LABEL=7
+part 154 vdiffMarker 460 70 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 13 0 16 14 hlb 100 NODE=-
+a 0 a 0 0 6 20 hlb 100 LABEL=7
+part 155 vdiffMarker 460 70 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 6 20 hlb 100 LABEL=8
+part 156 vdiffMarker 460 110 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 13 0 16 14 hlb 100 NODE=-
+a 0 a 0 0 6 20 hlb 100 LABEL=8
+part 157 vdiffMarker 400 110 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 a 0 0 6 20 hlb 100 LABEL=9
+part 158 vdiffMarker 400 70 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 13 0 16 14 hlb 100 NODE=-
+a 0 a 0 0 6 20 hlb 100 LABEL=9
+@conn
+w 115
+s 280 110 310 110 75
+s 280 90 280 110 73
+s 250 110 280 110 77
+w 105
+a 0 up 0:33 0 0 0 hln 100 V=
+s 210 140 490 140 106
+a 0 up 33 0 350 139 hct 100 V=
+s 490 140 490 70 118
+s 460 70 450 70 110
+s 490 70 460 70 120
+s 210 110 210 140 104
+w 149
+a 0 up 0:33 0 0 0 hln 100 V=
+s 350 110 400 110 133
+s 400 110 460 110 131
+a 0 up 33 0 430 109 hct 100 V=
+w 123
+a 0 up 0:33 0 0 0 hln 100 V=
+s 280 50 400 50 122
+a 0 up 33 0 340 49 hct 100 V=
+s 410 70 400 70 112
+s 400 50 400 70 124
+@junction
+j 460 70
++ p 81 2
++ w 105
+j 450 70
++ p 79 1
++ w 105
+j 410 70
++ p 79 2
++ w 123
+j 400 70
++ p 80 2
++ w 123
+j 280 50
++ p 126 +
++ w 123
+j 210 110
++ p 148 +
++ w 105
+j 460 110
++ p 81 1
++ w 149
+j 400 110
++ p 80 1
++ w 149
+j 350 110
++ p 127 +
++ w 149
+j 280 110
++ s 32
++ w 115
+j 310 110
++ p 127 -
++ w 115
+j 280 90
++ p 126 -
++ w 115
+j 250 110
++ p 148 -
++ w 115
+j 400 70
++ p 153 pin1
++ p 80 2
+j 400 70
++ p 153 pin1
++ w 123
+j 460 70
++ p 154 pin1
++ p 81 2
+j 460 70
++ p 154 pin1
++ w 105
+j 460 70
++ p 155 pin1
++ p 81 2
+j 460 70
++ p 155 pin1
++ w 105
+j 460 110
++ p 156 pin1
++ p 81 1
+j 460 110
++ p 156 pin1
++ w 149
+j 400 110
++ p 157 pin1
++ p 80 1
+j 400 110
++ p 157 pin1
++ w 149
+j 400 70
++ p 158 pin1
++ p 80 2
+j 400 70
++ p 158 pin1
++ w 123
+@attributes
+a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
+a 0 s 0:13 0 0 0 hln 100 PAGENO=1
+a 0 s 0:13 0 0 0 hln 100 PAGESIZE=A
+a 0 s 0:13 0 0 0 hln 100 PAGECOUNT=1
+@graphics
