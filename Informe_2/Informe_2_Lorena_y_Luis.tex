@@ -4,6 +4,7 @@
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{makeidx}
+\usepackage{amsmath}
 \geometry{margin=2.5cm}
 
 \title{Informe - Práctica \#1}
@@ -237,7 +238,7 @@
 		
 		\noindent Para esta configuración se aplicó un análisis ac sweep que resultó en:\\
 		
-		\includegraphics[width=11cm,height=7cm]{Img/filtro_pasa_alto_activo}\\
+		\includegraphics[width=11cm,height=7cm]{Img/filtro_pasa_bajo_activo}\\
 		
 		\newpage
 		
@@ -257,7 +258,172 @@
 		\textbf{\large ANÁLISIS DE RESULTADOS}\\
 	\end{center}
 	
-	Inserte análisis de resultados
+	\renewcommand{\theenumi}{\alph{enumi}} %Letras minúsculas 
+	
+	\begin{enumerate}
+		\item Los valores de voltaje DC sobre las dos resistencias del circuito 2.1.a\\
+		
+		\includegraphics{Img/2_1_a}
+		
+		\noindent Acá tendremos las siguientes relaciones mediante divisor de voltajes:\\
+		
+		\begin{equation}
+			\notag V_1 = \frac{R_1}{R_1 + R_2} V_f = \frac{2k\Omega}{5k\Omega}(5V) = 2V
+		\end{equation}
+	
+		\begin{equation}
+			\notag V_2 = \frac{R_2}{R_1 + R_2} V_f = \frac{3k\Omega}{5k\Omega}(5V) = 3V
+		\end{equation}
+	
+		\noindent En el gráfico se aprecia que la fuente se mantiene en el valor de $5V$, la resistencia $R_2$ sobre la cual se midió el voltaje tiene $3V$ y la tierra por supuesto se encuentra a $0V$.
+		
+		\item Los valores de voltaje pico sobre las dos resistencias del circuito 2.1.b\\
+		
+		\includegraphics{Img/2_1_b}
+		
+		\noindent En este caso, el voltaje pico de la fuente oscila entre $5V$ y $-5V$, mientras que el voltaje pico sobre $R_2$ oscila entre $3V$ y $-3V$, esto sucede debido a que el voltaje no es constante en el tiempo, sin embargo, en el dominio fasorial, se puede evidenciar que mediante divisor de voltaje se obtienen esos valores pico.
+		
+		\item Los valores de voltaje pico sobre la resistencia $V_{R_p}$, el
+		voltaje pico sobre el condensador $V_{C_p}$ y el valor de la
+		frecuencia de corte del filtro pasa bajo presentado en la figura 2.2.a
+		
+		\includegraphics{Img/2_2_a}\\
+		
+		\noindent Para esta configuración se aplicarán las fórmulas proporcionadas en las instrucciones para la realización del informe.\\
+		
+		\begin{equation}
+			\notag V_{R_p} = \frac{R}{\sqrt{R^2 + (\frac{1}{2\pi f C})^2}}V_p = \frac{1k\Omega}{\sqrt{1k\Omega ^2 + \Big (\frac{1}{2\pi (1kHz) (100nF)}\Big)^2}}(5V) = 2.66V
+		\end{equation}
+		\\
+		
+		\begin{equation}
+			\notag V_{C_p} = \frac{\frac{1}{2 \pi f C}}{\sqrt{R^2 + (\frac{1}{2\pi f C})^2}}V_p = \frac{\frac{5V}{2\pi (1kHz) (100nF)}}{\sqrt{1k\Omega ^2 + \Big (\frac{1}{2\pi (1kHz) (100nF)}\Big)^2}} = 4.23V
+		\end{equation}
+		
+		\noindent La gráfica no tiene sufiente precisión para determinar los valores exactos, sin embargo, se puede apreciar que los valores está, cercanos a los valores arrojados por la gráfica.\\
+		
+		\noindent La frecuencia de corte se determina mediante:\\
+		
+		\begin{equation}
+			\notag f_C = \Big(\frac{1}{2\pi}\Big)\Big(\frac{1}{RC}\Big) = \Big(\frac{1}{2\pi (1k\Omega)(100nF)}\Big) = 1591.55Hz
+		\end{equation}\\
+		
+		\noindent En la gráfica del análisis AC sweep se ve claramente como después de los $1kHz$ el voltaje baja al $70\%$, es decir, elimina los voltajes a frecuencias muy altas.\\
+		
+		\item Los valores de voltaje pico sobre la resistencia $V_{R_p}$, el voltaje pico sobre la inductancia $V_{L_p}$ y el valor de la frecuencia de corte del filtro alto RL presentado en la figura 2.2.b
+		
+		\includegraphics{Img/2_2_b}\\
+		
+		\noindent Nuevamente aplicamos las fórmulas propuestas en el documento donde se explica el informe:\\
+		
+		\begin{equation}
+			\notag V_{R_p} = \frac{R}{\sqrt{R^2 + (2\pi f L)^2}}V_p = \frac{1k\Omega}{\sqrt{1k\Omega ^2 + \Big (2\pi (1kHz) (100mH)\Big)^2}}(5V) = 4.23V
+		\end{equation}\\
+	
+		\begin{equation}
+			\notag V_{L_p} = \frac{R}{\sqrt{R^2 + (2\pi f L)^2}}V_p = \frac{2\pi (1kHz) (100mH)}{\sqrt{1k\Omega ^2 + \Big (2\pi (1kHz) (100mH)\Big)^2}}(5V) = 2.66V
+		\end{equation}\\
+	
+		\noindent Para la frecuencia se tiene la expresión:\\
+		
+		\begin{equation}
+			\notag f_L = \Big(\frac{1}{2\pi}\Big)\Big(\frac{R}{L}\Big) = \Big(\frac{(1k\Omega)}{2\pi (100nF)}\Big) = 1591.55Hz
+		\end{equation}\\
+	
+		\noindent El resultado es análogo al circuito anterior, sin embargo, en la gráfica esta vez se evidencia que la frecuencia de corte muestra el aumento hasta el $70\%$ del voltaje, es decir, el filtro elimina los voltajes a bajas frecuencias.\\
+		
+		\item Las constantes de tiempo del circuito RC ($t = RC$) y del circuito RL ($t = L/R$):\\
+		
+		\begin{itemize}
+			\item Circuito RC:\\
+			
+			\begin{equation}
+				\notag \tau = RC = (1k\Omega)(100nF) = 0.1ms
+			\end{equation}\\
+		
+			\noindent En la gráfica se puede evidenciar que para ese tiempo, la carga del condensador está a $\frac{1}{3}$ de su carga máxima, por lo que su diferencia de potencial seguirá aumentando hasta cargarse completamente, en un circuito de corriente contínua, al cargarse el condensador actuaría como circuito abierto, sin embargo, acá, al tratarse de corriente que oscila en dos direcciones, el condensador se carga y se descarga varias veces.\\
+			
+			\item Circuito RL:
+			
+			\begin{equation}
+				\notag \tau = \frac{L}{R} = \frac{100mH}{1k\Omega} = 0.1ms
+			\end{equation}\\
+			
+			\noindent Acá el resultado es análogo al anterior, la única diferencia es el comportamiento del inductor, es conocido que en corriente alterna el inductor evita el cambio brusco de la corriente, mientras que el capacitor regula el voltaje en este tipo de circuitos.\\
+			
+		\end{itemize}
+		
+		\item Frecuencia de resonancia del circuito RLC de la figura 2.3\\
+		
+		\includegraphics{Img/2_3}\\
+		
+		\noindent La ecuación propuesta para la frecuencia de resonancia es:\\
+		
+		\begin{equation}
+			\notag f_r = \frac{1}{2\pi}\sqrt{\frac{1}{LC}} = \frac{1}{2\pi}\sqrt{\frac{1}{(100mH)(100nF)}} = 1591.55Hz
+		\end{equation}\\
+	
+		\noindent En este circuito se puede apreciar que justo en la frecuencia de corte, la diferencia de potencial que circula es la máxima, es decir, sólo se da paso a voltajes en un determinado rango de frecuencias.\\
+		
+		\item La ganancia del amplificador inversor de la figura 2.5\\
+		
+		\includegraphics{Img/2_5}\\
+		
+		\noindent En el curso EC1251 se estudió que para un opam inversor, se cumple que:\\
+		
+		\begin{equation}
+			\notag \frac{V_0}{V_i} = -\frac{R_2}{R_1} = -\frac{10k\Omega}{1k\Omega} = -10
+		\end{equation}\\
+	
+		\noindent Dicho valor quedó corroborado ya que en el bias point detail $V_i = 1V$ y $V_0 = -10V$, lo cual confirma que el análisis mediante ecuaciones es correcto, aún más queda evidenciado en el análisis con corriente alterna, ya que los valores del voltaje para corriente directa serán los valores pico para alterna. En la gráfica de alterna e evidencia cómo el primer ciclo lleva a $V_0$ desde $0V$ hasta $-10V$ y el voltaje en $R_1$ de $0$ a $1V$, por supuesto, cabe a destacar que al ser corriente alterna, sus ciclos oscilan, cambiando el sentido de la corriente, por lo que hay puntos donde $V_0$ llega a $10V$.\\
+		
+		\noindent Para el AC sweep se evidencia el punto en el cual $V_0$ corta a $V_{R_1}$ y empieza el otro ciclo de carga.\\
+		
+		\item La frecuencia de corte del filtro pasa bajo activo de la figura 2.6\\
+		
+		\includegraphics{Img/2_6}\\
+		
+		\noindent Para la frecuencia de corte se tiene que:\\
+		
+		\begin{equation}
+			\notag f_C = \frac{1}{2\pi R_2 C} = \frac{1}{2 \pi(10nF)(10k\Omega)} = 1591.55Hz
+		\end{equation}\\
+	
+		\noindent En la gráfica se ve claramente que alrededor de $1591.55Hz$ se disminuye a aproximadamente $70\%$ del voltaje y sigue en disminución, esto se debe a que esta configuración sólo permite que se mantenga la diferencia de potencial a bajas frecuencias.\\
+		
+		\item La frecuencia de corte del filtro pasa bajo alto de la figura 2.7\\
+		
+		\includegraphics{Img/2_7}\\
+		
+		\noindent La frecuencia de corte en este caso será:\\
+		
+		\begin{equation}
+			f_C = \frac{1}{2\pi R_1 C} = \frac{1}{2\pi (1k\Omega) (100nF)} = 1591.55Hz
+		\end{equation}\\
+	
+		\noindent Al igual que en la configuración anterior, la frecuencia de corte en la gráfica muestra cuando el voltaje está más del $70\%$, sin embargo, en este caso a partir de este punto se sigue aumentando y se permiten sólo las diferencias de potencial de alta frecuencia, también se evidencia que si se eleva demasiado la frecuencia también se atenúa el voltaje hasta hacerse cero.\\
+		
+		\item Sistemas trifásicos:\\
+		
+		\includegraphics{Img/2_4_a}\\
+		
+		\begin{itemize}
+			\item Carga estrella:\\
+			
+			\noindent En las gráficas de esta configuración se puede apreciar cómo cada una de las resistencias está en fase con una de las fuentes, eso se debe a que cada una de esas cargas/resistencias está en la misma línea que una fuente.\\
+			
+			\item Carga delta:\\
+			
+			\noindent En este caso se puede evidenciar que debido a que ninguna carga está conectada en serie con una fuente, no tendrán el mimo voltaje pico que las fuentes, además, al estar conectadas a dos nodos cada una, se encontrá con que en determinados momentos una resistencia tendrá una diferencia de potencial de aproximadamente el doble del voltaje de una fuente, esto se debe a que las fuentes tienen el mismo voltaje pico el cual afecta a todas las resistencias.\\
+			
+			
+		\end{itemize}
+	
+		\item Filtro pasa alto a frecuencias altas:\\
+		
+		\noindent Lo que pasa con él es que a bajas frecuencias el capacitor se carga raápidamente por lo que las bajas frecuencias son eliminadas, sin embargo, pasa algo curioso, ya que a altas frecuencias la oscilación de la onda es tan grande y el cambio de voltaje tan brusco que el capacitador también filtra esas frecuencias.\\
+		
+	\end{enumerate}
 	
 	\newpage
 	
