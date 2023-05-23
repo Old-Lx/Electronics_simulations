@@ -6,7 +6,7 @@
 \usepackage{makeidx}
 \geometry{margin=2.5cm}
 
-\title{Informe - Práctica \#1}
+\title{Informe - Práctica \#2}
 \author{Tu nombre}
 \date{Fecha de entrega}
 
@@ -22,8 +22,8 @@
 		SECCIÓN 1 - GRUPO 1\\
 		
 		\vspace{7cm}
-		\textbf{\Large INFORME - PRÁCTICA \#}\\
-		INTRODUCCIÓN AL LABORATORIO\\
+		\textbf{\Large INFORME - PRÁCTICA \#2}\\
+		SIMULACIÓN DE CIRCUITOS CON SPICE\\
 	\end{center}
 	
 	\begin{flushleft}
@@ -41,7 +41,11 @@
 		\textbf{\large RESUMEN}\\
 	\end{center}
 	
-	Inserte resumen
+	En el laboratorio de esta semana, nos familiarizamos con el programa PSPICE y exploramos una variedad de circuitos utilizando diferentes componentes y fuentes de voltaje. Comenzamos nuestro estudio con fuentes de corriente y resistencias en serie, lo que nos permitió comprender las características básicas de los circuitos eléctricos. A medida que avanzamos, pasamos a trabajar con fuentes de corriente alterna y utilizamos condensadores e inductores para analizar su comportamiento en el dominio de la frecuencia. Además, experimentamos reemplazando las fuentes de corriente alterna por fuentes de pulso en estos circuitos para obtener diferentes resultados.\\
+	
+	Exploramos también circuitos trifásicos en configuraciones estrella-estrella y estrella-delta, lo que nos permitió comprender el flujo de corriente en sistemas de energía trifásica. Por último, abordamos el diseño de circuitos con amplificadores operacionales (OPAM), específicamente filtros pasa-bajo y pasa-alto activos. Utilizamos los análisis disponibles en PSPICE, como el análisis transitorio, el análisis de punto de polarización y el análisis de barrido de frecuencia, para obtener una comprensión completa del comportamiento de los circuitos en diferentes condiciones.\\
+	
+	En resumen, este laboratorio nos brindó una sólida introducción al uso de PSPICE y nos permitió explorar una variedad de circuitos con diferentes componentes y fuentes de voltaje. A través de nuestros experimentos y análisis, adquirimos un mayor conocimiento sobre el comportamiento de los circuitos eléctricos y sus aplicaciones prácticas.\\
 	
 	\newpage
 	
@@ -52,11 +56,12 @@
 	\noindent \textbf{RESUMEN} \hfill \textbf{I}\\
 	\noindent \textbf{ÍNDICE} \hfill \textbf{II}\\
 	\noindent \textbf{MARCO TEÓRICO} \hfill \textbf{1}\\
-	\noindent \textbf{METEODOLOGÍA} \hfill \textbf{4}\\
-	\noindent \textbf{RESULTADOS} \hfill \textbf{5}\\
-	\noindent \textbf{ANÁLISIS DE RESULTADOS} \hfill \textbf{13}\\
+	\noindent \textbf{METEODOLOGÍA} \hfill \textbf{2}\\
+	\noindent \textbf{RESULTADOS} \hfill \textbf{3}\\
+	\noindent \textbf{ANÁLISIS DE RESULTADOS} \hfill \textbf{19}\\
 	\noindent \textbf{CONCLUSIONES} \hfill \textbf{14}\\
-	\noindent \textbf{COMENTARIOS FINALES} \hfill \textbf{15}\\
+	\noindent \textbf{BIBLIOGRAFÍA} \hfill \textbf{15}\\
+	\noindent \textbf{ANEXOS} \hfill \textbf{15}\\
 	
 	\newpage
 	
@@ -66,14 +71,39 @@
 		\textbf{\large MARCO TEÓRICO}\\
 	\end{center}
 	
-	\textbf{1. }\\
+	\textbf{1. Programa SPICE:}\\
 	
-	Inserte inciso 1
+	El programa SPICE (Simulation Program with Integrated Circuit Emphasis) es una herramienta de simulación ampliamente utilizada en el campo de la ingeniería eléctrica y electrónica. Proporciona un entorno virtual para el diseño, análisis y optimización de circuitos eléctricos y electrónicos. En el laboratorio de mediciones se cuenta con PSPICE Evaluation 9.1\\
 	
-	\begin{itemize}
-		\item \textbf{Sub-elemento 1 del inciso } inserte lo que corresponda
+	SPICE se basa en modelos matemáticos que describen el comportamiento de los componentes electrónicos, como resistencias, condensadores, inductores, transistores, entre otros. Estos modelos permiten simular el comportamiento de los circuitos en diferentes condiciones y predecir su rendimiento.\\
+	
+	Una de las características más importantes de SPICE es su capacidad para realizar análisis en dominios de tiempo y frecuencia. El análisis transitorio permite estudiar la respuesta de un circuito a señales de entrada variables en el tiempo, lo que es útil para examinar el comportamiento durante el encendido o apagado del circuito. El análisis de frecuencia, por otro lado, permite evaluar la respuesta en frecuencia de un circuito, identificar bandas de paso o rechazo, y analizar la estabilidad y el rendimiento del circuito en diferentes rangos de frecuencia.\\
+	
+	SPICE también permite realizar análisis de punto de polarización (bias point) para determinar las corrientes y voltajes de reposo en los componentes del circuito. Esto es importante para asegurar el correcto funcionamiento del circuito y evitar el sobrecalentamiento o daño de los componentes.\\
+	
+	Además, SPICE cuenta con una amplia biblioteca de modelos de componentes estándar, lo que facilita la selección y simulación de componentes comunes en el diseño de circuitos. También ofrece la posibilidad de crear modelos personalizados para componentes no estándar.\\
+	
+	En resumen, SPICE es una herramienta poderosa que permite simular y analizar circuitos eléctricos y electrónicos en diferentes dominios. Su capacidad para realizar análisis transitorios, de frecuencia y de punto de polarización, junto con su amplia biblioteca de modelos, lo convierten en una herramienta fundamental en el diseño y desarrollo de circuitos electrónicos.\\
+	
+	\newpage
+	
+	\begin{center}
+		\textbf{\large METODOLOGÍA}\\
+	\end{center}
+
+	A continuación se describen los pasos básicos para simular un circuito en SPICE que se utilizaron durante la sesión de laboratorio:
+	
+	\begin{enumerate}
+		\item \textbf{Diseño del circuito:} Primero, debes diseñar el circuito en un software de diseño de circuitos o en un editor de texto. Define los componentes electrónicos (resistencias, condensadores, inductores, etc.) y su interconexión. Asegúrate de proporcionar valores adecuados para los componentes.
 		
-	\end{itemize}
+		\item \textbf{Creación del archivo de netlist:} Una vez que hayas diseñado el circuito, debes crear un archivo de netlist. Este archivo es un documento de texto que describe el circuito y contiene información sobre los componentes, su conexión y los análisis a realizar. Puedes utilizar un editor de texto como Notepad o Vim para crear este archivo.
+		
+		\item \textbf{Especificación de análisis:} En el archivo de netlist, debes especificar qué tipo de análisis deseas realizar en el circuito. SPICE ofrece diferentes análisis, como análisis transitorio, análisis de punto de polarización (bias point), análisis AC (frecuencia), entre otros. Asegúrate de seleccionar el análisis apropiado según tus necesidades.
+		
+		\item \textbf{Ejecución de la simulación:} Una vez que hayas creado el archivo de netlist y especificado los análisis, debes ejecutar la simulación en SPICE. Esto se hace ejecutando el comando correspondiente en la interfaz del programa o a través de la línea de comandos. SPICE procesará el archivo de netlist y realizará los análisis especificados.
+		
+		\item \textbf{Análisis de resultados:} Una vez completada la simulación, SPICE generará resultados que puedes analizar. Estos resultados pueden incluir gráficas de respuestas en el dominio del tiempo o la frecuencia, tablas con valores de corrientes y voltajes, entre otros. Examina los resultados para comprender el comportamiento del circuito y verificar su correcto funcionamiento.\\
+	\end{enumerate}
 	
 	\newpage
 	
@@ -268,5 +298,18 @@
 	Inserte conclusiones
 	
 	\newpage
+	
+	\begin{center}
+		\textbf{\large BIBLIOGRAFÍA}\\
+	\end{center}
+	
+	Guía rápida de PSPICE versión 9.1. Universidad Pontificia de Comillas.\\
+	http://dea.unsj.edu.ar/sredes/ManualSpice.pdf
+	
+	\newpage
+	
+	\begin{center}
+		\textbf{\large ANEXOS}\\
+	\end{center}
 	
 \end{document}
