@@ -131,4 +131,6 @@ dmypy.json
 #LaTeX
 *.aux
 *.log
+*.pdf
+
 *.synctex.gz
