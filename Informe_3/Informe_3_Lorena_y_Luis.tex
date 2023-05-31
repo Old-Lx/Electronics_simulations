@@ -4,6 +4,7 @@
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{makeidx}
+\usepackage{amsmath}
 \geometry{margin=2.5cm}
 
 \begin{document}
@@ -115,9 +116,9 @@
 		\item \textbf{Determinación de la resistencia interna de un voltímetro:}
 		
 		\begin{itemize}
-			\item Se determina utilizando la caracterı́stica $\Omega/V$ proporcionada por el fabricante. Para nuestro voltímetro fue $10K\Omega/V$
-			\item Para cada escala, se multiplicó el máximo de la
-			escala por la caracterı́stica $\Omega/V$ para obtener la correspondiente resistencia interna mediante la siguiente formula: $$R_{volt1} = R_{i} + R_{1} = Y(\Omega/V) * E_{max}$$ 
+			\item Se determina utilizando la característica $\Omega V$ proporcionada por el fabricante. Para nuestro voltímetro fue $10K\Omega V$
+			\item Para cada escala, se multiplicó el máximo de la
+			escala por la característica $\Omega V$ para obtener la correspondiente resistencia interna mediante la siguiente fórmula: $R_{volt1} = R_{i} + R_{1} = Y(\Omega V) * E_{max}$ 
 		\end{itemize}
 		
 		\item \textbf{Medición del valor real de las resistencias bajo prueba:}
@@ -149,15 +150,100 @@
 		\textbf{\large RESULTADOS}\\
 	\end{center}
 	
-	Inserte resultados
+	\noindent Durante las mediciones se obtuvieron los siguientes resultados:
 	
+	\begin{center}
+		\includegraphics[width=16cm,height=20cm]{Img/datos_lab_0001}
+	\end{center}
+
+	\begin{center}
+		\includegraphics[width=16cm,height=20cm]{Img/datos_lab_0002}
+	\end{center}
+	
+	\begin{center}
+		\includegraphics[width=16cm,height=20cm]{Img/datos_lab_0003}
+	\end{center}
+
+	\begin{center}
+		\includegraphics[width=16cm,height=20cm]{Img/datos_lab_0004}
+	\end{center}
+
+	\begin{center}
+		\includegraphics[width=16cm,height=20cm]{Img/datos_lab_0005}
+	\end{center}
+
+	\begin{center}
+		\includegraphics[width=16cm,height=20cm]{Img/datos_lab_0006}
+	\end{center}
+
+	\begin{center}
+		\includegraphics[width=16cm,height=20cm]{Img/datos_lab_0007}
+	\end{center}
+
+	\begin{center}
+		\includegraphics[width=16cm,height=20cm]{Img/datos_lab_0008}
+	\end{center}
+
+	\begin{center}
+		\includegraphics[width=16cm,height=20cm]{Img/datos_lab_0009}
+	\end{center}
+
+
 	\newpage
 	
 	\begin{center}
 		\textbf{\large ANÁLISIS DE RESULTADOS}\\
 	\end{center}
 	
-	Inserte análisis de resultados
+	\section{Mediciones del amperímetro analógico}
+	
+	\noindent Según los resultados obtenidos hay que calcular las medidas de corriente del amperímetro analógico, ya que sólo se tomó la posición de la aguja, es decir que para la escala de $0,3mA$ se tendrá $I_j = \frac{0,3 \times n}{30}$ donde $n$ es la división en la que quedó la aguja, quedando $I_1 = 0,01mA$; $I_2 = 0,02mA$; $I_3 = 0,03mA$; $I_4 = 0,04mA$ para la escala de $0,3mA$. Para la escala de $1mA$ se tiene $I_j = \frac{1 \times n}{30}$,quedando $I_1 = 0,03mA$; $I_2 = 0,06mA$; $I_3 = 0,1mA$; $I_4 = 0,13mA$.\\
+	
+	\begin{center}
+		\includegraphics[width=16cm,height=3cm]{Img/anexo_1}
+	\end{center}
+
+	\noindent Se puede evidenciar a partir de los cálculos basados en los datos de la tabla anterior según los datos obtenidos es menos exacto que el amperímetro digital. Se cree que esto se debe a errores sistemáticos a la hora de realizar las mediciones por haberse equivocado en alguna parte del proceso de medición. Se estima que pobablemente el error radica en no haber subido lo suficiente al voltaje de la fuente para obtener medidas de las posiciones altas de la escala\\
+	
+	\noindent La precisión por otro lado, pese a cualquier error sistemático en el cual se haya podido incurrir, se nota que la precisión del amperímetro analógico es adecuada ya que refleja suficientes dígitos de la medida.\\
+	
+	\noindent Para la linealidad tendremos que en ambas escalas es cero, sin embargo, esto puede deberse al posible error mencionado anteriormente.
+	
+	\newpage
+	
+	\section{Mediciones de las resistencias mediante distintos métodos}
+	
+	\noindent Para este inciso se obtuvieron los siguientes datos:\\
+	
+	\begin{center}
+		\includegraphics[width=16cm,height=3cm]{Img/anexo_2}
+	\end{center}
+
+	\begin{center}
+		\includegraphics[width=16cm,height=3cm]{Img/anexo_3}
+	\end{center}
+	
+	\begin{center}
+		\includegraphics[width=16cm,height=3cm]{Img/anexo_4}
+	\end{center}
+
+	\begin{center}
+		\includegraphics[width=16cm,height=3cm]{Img/anexo_5}
+	\end{center}
+
+	\begin{center}
+		\includegraphics[width=16cm,height=3cm]{Img/anexo_6}
+	\end{center}
+
+	\noindent Se puede evidenciar que la medida más precisa y exacta fue la del puente de wheatstone ya que es un dispositivo diseñado específicamente para realizar medidas sumamente adecuadas.\\
+	
+	\noindent Para las mediciones directas se aprecia que el óhmetro digital es superior en cuanto a precisión y exactitud, destacando que el óhmetro analógico se sale del rango de valores de las resistencias en ambas medidas.\\
+	
+	\noindent En el primer método que consiste en el amperímetro en serie con la resistencia, se tiene que la resistencia de valor alto dió $100k\Omega$ lo cual es bastante preciso y está dentro del rango de valores de la resistencia, este resultado es sumamente cercano al medido con el puente de wheatstone. La resistencia de valor pequeño por otro lado resultó en un valor por encima de los $10k\Omega$ lo cual es totalmente erróneo y fuera del rango de valor.
+	
+	\noindent El segundo método consistió en el voltímetro en paralelo con la resistencia, quedando que para la resistencia alta su valor era $7,5k\Omega$, lo cual es errado totalmente, mientras que para la resistencia pequeña se tuvo que su valor fue de $814\Omega$ los cual es sumamente cercano, sin embargo, no se encuentra dentro del rango de valores de la resistencia.
+	
+	\noindent Estos resultados tienen sentido ya que se había determinado que para el primer método $R_x = \frac{V_{R_x}}{I_{R_x}} + R_{ia}$ y para el segundo $\frac{1}{R_x} = \frac{I_{R_x}}{V_{R_x}} + \frac{1}{R_{iv}}$. Esto sucede porque para el primer método, mientras más resistencia, menos afectará la resistencia interna del amperímetro que tiene en serie, mientras que en el segundo método la resistencia más pequeña no se verá gravemente afectada. Todo eso sucede porque la configuración en serie de resistencias las suma linealmente, mientras que en paralelo se suman sus inversos, es decir, la más pequeña definirá con mayor peso el resultado equivalente.\\
 	
 	\newpage
 	
