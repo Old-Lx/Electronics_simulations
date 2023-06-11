@@ -1,0 +1,23 @@
+* C:\users\lartrax\Desktop\Universidad\Materias\Redes\Lab de mediciones\Electronics_simulations\Spice\Práctica_2\Fuente_AC_RC.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Tue Jun 06 19:03:31 2023
+
+
+
+** Analysis setup **
+.tran 0.1ms 1ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Fuente_AC_RC.net"
+.INC "Fuente_AC_RC.als"
+
+
+.probe
+
+
+.END
