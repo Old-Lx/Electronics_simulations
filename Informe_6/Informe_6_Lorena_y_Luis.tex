@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{geometry}
 \usepackage{graphicx}
+\usepackage{amsmath}
 \usepackage{makeidx}
 \geometry{margin=2.5cm}
 \usepackage{fancyhdr}
@@ -52,10 +53,10 @@
     \noindent \textbf{MARCO TEÓRICO} \hfill \textbf{1}\\
     \noindent \textbf{METEDOLOGÍA} \hfill \textbf{3}\\
     \noindent \textbf{RESULTADOS} \hfill \textbf{5}\\
-    \noindent \textbf{ANÁLISIS DE RESULTADOS} \hfill \textbf{}\\
-    \noindent \textbf{CONCLUSIONES} \hfill \textbf{}\\
-    \noindent \textbf{BIBLIOGRAFÍA} \hfill \textbf{}\\
-    \noindent \textbf{ANEXOS} \hfill \textbf{}\\
+    \noindent \textbf{ANÁLISIS DE RESULTADOS} \hfill \textbf{23}\\
+    \noindent \textbf{CONCLUSIONES} \hfill \textbf{24}\\
+    \noindent \textbf{BIBLIOGRAFÍA} \hfill \textbf{25}\\
+    \noindent \textbf{ANEXOS} \hfill \textbf{26}\\
     
     \newpage
     
@@ -148,18 +149,170 @@
     \newpage
     
     \begin{center}
-        \textbf{\large RESULTADOS}\\
+    	\textbf{\large RESULTADOS}\\
     \end{center}
     
-    Inserte resultados
+    \renewcommand{\theenumi}{\alph{enumi}} %Letras minúsculas 
+    
+    \begin{enumerate}
+    	\item Error porcentual entre los valores teóricos y los medidos para la
+    	frecuencia de resonancia y el factor de calidad Q del circuito RLC serie:
+    	
+    	\begin{center}
+    		\includegraphics[width=16cm,height=20cm]{Img/prac_0001}
+    	\end{center}
+    	
+    	\begin{itemize}
+    		
+    		\item Respuestas subamortiguadas:
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=8cm]{Img/subamor_1}
+    		\end{center}
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=20cm]{Img/subamor_lab1}
+    		\end{center}
+    		
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=8cm]{Img/subamor_2}
+    		\end{center}
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=20cm]{Img/subamor_lab2}
+    		\end{center}
+    		
+    		\item Respuesta críticamente amortiguada:
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=8cm]{Img/critamor}
+    		\end{center}
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=20cm]{Img/critamor_lab}
+    		\end{center}
+    		
+    		\item Respuestas sobre amortiguadas:
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=8cm]{Img/sobreamor_1}
+    		\end{center}
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=20cm]{Img/sobreamor_lab1}
+    		\end{center}
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=8cm]{Img/sobreamor_2}
+    		\end{center}
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=20cm]{Img/sobreamor_lab2}
+    		\end{center}
+    	\end{itemize}
+    	
+    	\item Gráficas de voltaje de salida en función de la frecuencia:
+    	
+    	\begin{center}
+    		\includegraphics[width=16cm,height=20cm]{Img/prac_0002}
+    	\end{center}
+    	
+    	\begin{center}
+    		\includegraphics[width=16cm,height=20cm]{Img/prac_0003}
+    	\end{center}
+    	
+    	\begin{center}
+    		\includegraphics[width=16cm,height=20cm]{Img/prac_0004}
+    	\end{center}
+    	
+    	\begin{itemize}
+    		\item Voltaje en la resistencia:
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=8cm]{Img/vr}
+    		\end{center}
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=8cm]{Img/graph_1}
+    		\end{center}
+    		
+    		\item Voltaje sobre inductor y capacitor en paralelo:
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=8cm]{Img/vlc}
+    		\end{center}
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=8cm]{Img/graph_2}
+    		\end{center}
+    		
+    		\item Voltaje sobre capacitor:
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=8cm]{Img/vc}
+    		\end{center}
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=8cm]{Img/graph_3}
+    		\end{center}
+    		
+    		\item Voltaje sobre inductor:
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=8cm]{Img/vl}
+    		\end{center}
+    		
+    		\begin{center}
+    			\includegraphics[width=16cm,height=8cm]{Img/graph_4}
+    		\end{center}
+    		
+    	\end{itemize}
+    	
+    \end{enumerate}
     
     \newpage
     
     \begin{center}
-        \textbf{\large ANÁLISIS DE RESULTADOS}\\
+    	\textbf{\large ANÁLISIS DE RESULTADOS}\\
     \end{center}
     
-    Inserte análisis de resultados
+    \renewcommand{\theenumi}{\alph{enumi}} %Letras minúsculas 
+    
+    \begin{enumerate}
+    	\item Errores porcentuales entre los valores teóricos y los experimentales para la frecuencia de resonancia y el factor de calidad Q:
+    	
+    	\begin{itemize}
+    		\item Error de la frecuencia de resonancia:
+    		
+    		\begin{equation}
+    			\notag E\% = \frac{|1535 - 1585|}{1585} = 3,15\%
+    		\end{equation}
+    		
+    		\item Error del factor de calidad:
+    		
+    		\begin{equation}
+    			\notag E\% = \frac{|0,8604 - 1|}{1} = 13,96\%
+    		\end{equation}
+    		
+    	\end{itemize}
+    	
+    	\noindent El error en la frecuencia de resonancia es mucho menor que el de el factor de calidad, esto se debe a que la frecuencia de resonancia depende de sólo un valor medido, por lo tanto, su error tenderá a ser menor. En este caso el factor de calidad resultó en un error bastante grande, lo cual depende enteramente de los componentes utilizados, quedaría verificar si el error propagado está dentro de los márgenes que garantizan los fabricantes de los componentes.
+    	
+    	\item Respuesta transitoria sobre el condensador:
+    	
+    	\noindent Tanto en las gráficas de los datos obtenidos como en los análisis en spice se evidencia que al respuesta transitoria varía según la magnitud de la resistencia, aumentando la amortiguación en la medida que se aumenta la resistencia, llegando a la resistencia críticamente amortiguada en los $1,7k\Omega$. Al aumentar se obtienen las respuestas sobre amortiguadas y al disminuir se obtienen las subamortiguadas.
+    	
+    	\item Comparación de funciones:
+    	
+    	\noindent Las gráficas realizadas en excel representan un excelente aproximado a las funciones obtenidas en spice con los valores teóricos, por supuesto, debido a los errores hay cierta asimetría en las gráficas de excel debido a los errores de medición y valores reales del circuito, sin embargo, claramente se ve ue no hay inconsistencias en las mediciones realizadas.
+    	
+    	\item Desfasaje entre $V_g$ y $V_R$:
+    	
+    	\noindent El defase para $f_1$ es de $53,37^\circ$, que cuenta con un error de $18,6\%$, para $f_r$ no hay defase ni error y para $f_2$ hay un defase de $39,96^\circ$ el cual genera un error de $11,2\%$. El tamaño de este error se debe a que los valores teóricos a veces se alejan de los valores medidos a tal punto que dejan un gran margen de error respecto al valor teórico.
+    	
+    \end{enumerate}
+    
     
     \newpage
     
