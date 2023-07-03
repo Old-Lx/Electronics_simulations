@@ -104,7 +104,62 @@
 		\textbf{\large METODOLOGÍA}\\
 	\end{center}
 	
-	Inserte metodología
+	\renewcommand{\theenumi}{\alph{enumi}} %Letras minúsculas 
+	
+	\begin{enumerate}
+		
+		\item Determinación experimental del equivalente Thevenin:\\
+		
+		Tal y como se estudió en EC1251, el teorema de Thevenin es una simplificación que podemos aplicar para circuitos con elementos lineales, donde se reduce el circuito a un voltaje de Thevenin y una resistencia de Thevenin entre dos puntos $A$ y $B$. El equivalente de Thevenin de un circuito permite facilitar la operación del mismo respecto a un par de nodos de interés, haciendo mucho más simples los cálculos y manipulación del mismo. El circuito al cual se le determinó el equivalente de Thevenin fue:
+		
+		\begin{center}
+			\includegraphics[width=16cm,height=8cm]{Img/circ_1}
+		\end{center}
+		
+		Los valores nominales utilizados para este circuito fueron $V_g = 5V$, $f = 100Hz$, $R_1 = R_2 = 2k\Omega$ y $R_3 = 1k\Omega$.\\
+		
+		A partir de esos valores y esa configuración de circuito se procedió a realizar algunas medidas para calcular el equivalente de Thevenin. Se midió el voltaje de Thevenin mediante el osciloscopio y un voltímetro, también se midió la corriente de Norton con un amperímetro y con el osciloscopio usando una resistencia de $51,3\Omega$. Con el osciloscopio se obtuvieron los valores pico. A partir de eo datos se desarrolló se obtuvo el valor de Thevenin para las resistencias.\\
+		
+		\item Teorema de Máxima transferencia de Potencia:\\
+		
+		El teorema de máxima transferencia de potencia establece que, dada una fuente, con una resistencia de fuente fijada, la resistencia de carga que maximiza la transferencia de potencia es aquella con un valor óhmico igual a la resistencia de fuente.\\
+		
+		De allí se obtiene la idea de cómo variar la resistencia para obtener la máxima potencia, en los experimentos se realizan dos configuraciones, la primera variando la resistencia de Thevenin y la segunda variando la resistencia $R_L$.
+		
+		\begin{center}
+			\includegraphics[width=16cm,height=8cm]{Img/circ_2}
+		\end{center}
+		
+		\begin{center}
+			\includegraphics[width=16cm,height=8cm]{Img/circ_3}
+		\end{center}
+		
+		A partir de allí se usaron las mismas resistencias y $V_g$ que antes, en el caso en el que se varía la resistencia de Thevenin se usó una resistencia de $2k\Omega$.
+		
+		\item Impedancias en un circuito:\\
+		
+		Para este experimento se usó un circuito al cual se le tomaron mediciones en distintos puntos, los cuales fueron:\\
+		
+		\begin{center}
+			\includegraphics[width=16cm,height=8cm]{Img/circ_4}
+		\end{center}
+		
+		\begin{center}
+			\includegraphics[width=16cm,height=8cm]{Img/circ_5}
+		\end{center}
+		
+		\begin{center}
+			\includegraphics[width=16cm,height=8cm]{Img/circ_6}
+		\end{center}
+		
+		Y a partir de allí se determinaron las impedancias y el defase partiendo de tres resistencias cuyo valor nominal era $1k\Omega$, un condensador de $100nF$, un inductor de $100mH$ y una fuente de $10V$ pico a $1kHz$. Luego siguiendo leyes circuitales se determinó la impedancia.
+		
+		\item Operación de un medidor de verdadero valor rms y un vatímetro digital:\\
+		
+		Para este experimento se usó un variac, un dimmer, un bombillo y los distintos aparatos de medición. Lo que se hizo fue que primero se variaba el voltaje con el variac para modificar el la potencia disipada en el bombillo y tomar las medidas en los distintos instrumentos, luego, se realizó el mismo proceso con el dimmer, un aparato para regular la potencia disipada sin disminuir el voltaje.
+		
+		
+	\end{enumerate}
 	
 	\newpage
 	
@@ -162,7 +217,50 @@
 		\textbf{\large ANÁLISIS DE RESULTADOS}\\
 	\end{center}
 	
-	Inserte análisis de resultados
+	\renewcommand{\theenumi}{\alph{enumi}} %Letras minúsculas 
+	
+	\begin{enumerate}
+		
+		\item Mediciones del valor pico y el valor
+		rms para las tres señales periódicas a diferentes frecuencias:
+		
+		\noindent Es conocido que los voltímetros con los que se realizó la práctica miden el valor rms de ondas sinusoidales en ciertas frecuencias, es decir, su algorítmo está adaptado para el cálculo de ese tipo de onda basados en la operación $\frac{A}{\sqrt{2}}$.\\
+		
+		\noindent Se pudo evidenciar durante las mediciones que al cambiar el tipo de onda o la frecuencia de la onda, los voltímetros medían valores cada vez menos exactos. El voltímetro menos exacto fue el digital, que ya para frecuencias de $1kHz$ arrojaba valores inexactos y ya para los $10kHz$ arrojaba un valor sin sentido.\\
+		
+		\noindent Ambos voltímetros arrojaban un valor rms mayor para ondas cuadradas y menos para ondas triagulares. Estos instrumentos pueden ser utilizados para dichas mediciones pero ya es conocido que no sería óptimo y que pueden traer consigo errores sustanciales.
+		
+		\item Valores obtenidos para la resistencia de Thevenin:
+		
+		\noindent Para la resistencia de Thevenin se obtuvieron tres medidas, de las cuales la más cercana fue la primera, donde se midió la corriente de Norton mediante un amperímetro y el voltaje de Thevenin mediante un voltímetro, esto resultó en un valor de $2059\Omega$, que fue el más cercano a los $2000\Omega$ que se tenían mediante valores nominales. Los otros valores medidos tuvieron errores notables debido a resistencias internas y cómo estas interactuaban con el circuito, midiendo la corriente de Norton y voltaje de Thevenin el error se redujo al mínimo.
+		
+		\item Gráficas de $P_{RL}$ y $R_L$:
+		
+		\begin{center}
+			\includegraphics[width=16cm,height=8cm]{Img/graph_1}
+		\end{center}
+	
+		\begin{center}
+			\includegraphics[width=16cm,height=8cm]{Img/graph_2}
+		\end{center}\\
+	
+		\noindent Es conocido que la máxima transferencia de potencia se da cuando la resistencia de la carga es equivalente a la resistencia de Thevenin, en el primer experimento se varía la carga $R_L$. La potencia máxima se alcanza cuando $R_L$ alcanza el valor de resistencia de $R_{TH}$, es decir, alrededor de $2k\Omega$.\\
+		
+		\noindent En el segundo experimento se varía $R_{TH}$ y se deja $R_L$ fijo, cabe a destacar que para este experimento se conecta un voltímetro a $R_L$ el cual tiene una resistencia interna que influye en el sistema. En este caso $R_{TH}$ está en serie con el paralelo de $R_L$ y la resistencia interna del voltímetro, lo cual modifica su valor, dando como resultado que la máxima transferencia de potencia esté en $R_{TH} = 100\Omega$.
+		
+		\item Los valores de las impedancias:
+		
+		\noindent En la teoría se conoce que en circuitos AC, la impedancia resistiva tiene $0^{\circ}$ de defase, la inductiva $90^{\circ}$ donde el voltaje adelanta a la corriente y la capacitiva $90^{\circ}$ donde la corriente adelanta al voltaje. Para las medidas tomadas se obtuvo $Z_C = 1,6k\angle96,5^{\circ}\Omega$, $Z_L = 1133,33\angle 91,30^{\circ}\Omega$, $Z_p = 1026,81\angle 0^\circ \Omega$ y $Z_T = 432,95\angle 0^\circ \Omega$, lo cual se corresponde perfectamente con lo planteado en la teoría.
+		
+		\item Medición de los distintos instrumentos:
+		
+		\noindent Al estudiar la potencia disipada por un bombillo, se montaron dos circuitos a los cuales se conectaron distintos instrumentos de medición.\\
+		
+		\noindent Primero se conectó el circuito al variac para disminuir la potencia consumida al disminuir el voltaje, se vislumbró que esta manera es poco práctica ya que es difícil adquirir tal tecnología en casa para el uso diario. Por otro lado, se puede notar que en ambos consumos de potencia todos los voltímetros dan valores bastante exactos en su medición.\\
+		
+		\noindent Para el segundo circuito, en lugar de usar el variac, se usó un dimmer, un dispositivo electrónico que permite regular el consumo de potencia sin variar el voltaje. Es acá donde surgieron problemas en los voltímetros ya que para el máximo consumo de potencia que se configuró, las mediciones eran adecuadas, mientra que al disminuir la potencia consumida mediante el dimmer, pese a que el voltaje seguía igual, la lectura de los voltímetros cayó como si se estuviera alterando el voltaje, esto debido al funcionamiento de estos dispositivos.
+		
+	\end{enumerate}
 	
 	\newpage
 	
