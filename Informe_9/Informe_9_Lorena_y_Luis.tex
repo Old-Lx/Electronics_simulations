@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{makeidx}
 \usepackage{amsmath}
+\usepackage{tabularx}
 \geometry{margin=2.5cm}
 \usepackage{fancyhdr}
 
@@ -233,13 +234,29 @@
 	
 	La comparación entre la ganancia DC obtenida experimentalmente y la teórica puede mostrar discrepancias debido a tolerancias en los valores nominales de las resistencias y a las imperfecciones de los componentes utilizados. El cálculo del error porcentual permitirá cuantificar las diferencias entre los valores teóricos y experimentales.\\
 	
-	ERROR
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Ganancia DC experimental & Ganancia DC teórico & Error porcentual \\
+			\hline
+			10,06 & 10 & 0,6\% \\
+			\hline
+		\end{tabular}
+	\end{center}
 	
 	\noindent \textbf{b)} Compare la gráfica obtenida con el análisis TRANSIENT de SPICE para el amplificador inversor con la que Ud. obtuvo en la pantalla del osciloscopio, y explique las discrepancias en cuanto a los valores de la magnitud de voltaje y el desfasaje,	tomando en cuenta la tolerancia de los componentes utilizados. Calcule el error porcentual del voltaje de salida, tomando como referencia el valor teórico.\\
 	
 	Al comparar la gráfica obtenida en el análisis TRANSIENT de SPICE para el amplificador inversor con la que se obtuvo en la pantalla del osciloscopio, es común encontrar discrepancias en los valores de magnitud de voltaje y desfasaje. Estas discrepancias pueden deberse a las diferencias entre los modelos ideales utilizados en SPICE y el comportamiento real del amplificador operacional en el protoboard. Además, las tolerancias en los componentes utilizados también pueden contribuir a estas diferencias.\\
 	
-	ERROR
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			$V_{o}$ experimental & $V_{o}$ teórico & Error porcentual \\
+			\hline
+			-10,06V & -10V & 0,6\% \\
+			\hline
+		\end{tabular}
+	\end{center}
 	
 	\noindent \textbf{c)} Para el amplificador inversor, analice los valores del desfasaje entre Vo y Vi correspondientes a las dos frecuencias para las que se realizaron mediciones de desfasaje y comente estos resultados.\\
 	
@@ -253,13 +270,29 @@
 	
 	Para analizar la gráfica de la función de transferencia del amplificador no inversor, se aplican consideraciones similares a las del amplificador inversor. Se observan zonas lineales y de saturación, y el valor máximo de voltaje, tanto positivo como negativo, está determinado por la tensión de alimentación.\\
 	
-	ERROR
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Ganancia DC experimental & Ganancia DC teórico & Error porcentual \\
+			\hline
+			11,08 & 11 & 0,73\% \\
+			\hline
+		\end{tabular}
+	\end{center}
 	
 	\noindent \textbf{f)} Compare la gráfica obtenida con el análisis TRANSIENT de SPICE para el amplificador no inversor con la que Ud. obtuvo en la pantalla del osciloscopio, y explique las discrepancias en cuanto a los valores de la magnitud de voltaje y el desfasaje, tomando en cuenta la tolerancia de los componentes utilizados. Calcule el error porcentual del voltaje de salida, tomando como referencia el valor teórico.\\
 	
 	Al comparar la gráfica obtenida en el análisis TRANSIENT de SPICE para el amplificador no inversor con la que se obtuvo en la pantalla del osciloscopio, es común encontrar discrepancias en los valores de magnitud de voltaje y desfasaje debido a las mismas razones mencionadas anteriormente, como las diferencias entre los modelos teóricos y el comportamiento real del circuito en el protoboard.\\
 	
-	ERROR
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			$V_{o}$ experimental & $V_{o}$ teórico & Error porcentual \\
+			\hline
+			11,08V & 11V & 0,73\% \\
+			\hline
+		\end{tabular}
+	\end{center}
 	
 	\noindent \textbf{g)} Para el amplificador no inversor, analice los valores del desfasaje entre Vo y Vi correspondientes a las dos frecuencias para las que se realizaron mediciones de desfasaje y comente estos resultados.\\
 	
@@ -273,13 +306,29 @@
 	
 	Para analizar la gráfica de la función de transferencia del seguidor de voltaje, se aplican consideraciones similares a las de los amplificadores anteriores. Se observan zonas lineales y de saturación, y el valor máximo de voltaje, tanto positivo como negativo, está determinado por la tensión de alimentación.\\
 	
-	ERROR
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Ganancia DC experimental & Ganancia DC teórico & Error porcentual \\
+			\hline
+			1,05 & 1 & 5\% \\
+			\hline
+		\end{tabular}
+	\end{center}
 	
 	\noindent \textbf{j)} Compare la gráfica obtenida con el análisis TRANSIENT de SPICE para el seguidor de voltaje con la que Ud. obtuvo en la pantalla del osciloscopio y explique las discrepancias en cuanto a los valores de la magnitud de voltaje y el desfasaje, tomando	en cuenta la tolerancia de los componentes utilizados. Calcule el error porcentual del	voltaje de salida, tomando como referencia el valor teórico.\\
 	
 	Al comparar la gráfica obtenida en el análisis TRANSIENT de SPICE para el seguidor de voltaje con la que se obtuvo en la pantalla del osciloscopio, es común encontrar discrepancias en los valores de magnitud de voltaje y desfasaje debido a las mismas razones mencionadas anteriormente, como las diferencias entre los modelos teóricos y el comportamiento real del circuito en el protoboard.\\
 	
-	ERROR
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			$V_{o}$ experimental & $V_{o}$ teórico & Error porcentual \\
+			\hline
+			12,55V & 12V & 4,58\% \\
+			\hline
+		\end{tabular}
+	\end{center}
 	
 	\noindent \textbf{k)} Para el seguidor de voltaje, analice los valores del desfasaje entre Vo y Vi	correspondientes a las dos frecuencias para las que se realizaron mediciones de desfasaje y comente estos resultados.\\
 	
