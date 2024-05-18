@@ -1,0 +1,23 @@
+* E:\Práctica_3\Circuito_trifásico_estrella_estrella.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu May 18 10:32:14 2023
+
+
+
+** Analysis setup **
+.tran 0.1ms 68ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Circuito_trifásico_estrella_estrella.net"
+.INC "Circuito_trifásico_estrella_estrella.als"
+
+
+.probe
+
+
+.END

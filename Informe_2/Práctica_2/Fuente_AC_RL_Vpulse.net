@@ -1,8 +1,0 @@
-* Schematics Netlist *
-
-
-
-R_R1         $N_0002 $N_0001  1k  
-V_V         $N_0002 0  
-+PULSE 0V 5V 0 1n 1n 5m 10m
-L_L2         0 $N_0001  100mH  

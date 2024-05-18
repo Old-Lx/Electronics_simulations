@@ -1,0 +1,134 @@
+
+**** 05/18/23 09:44:25 *********** Evaluation PSpice (Nov 1999) **************
+
+ * E:\Prctica_3\Fuente_AC_RC_Vpulse.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu May 18 09:44:22 2023
+
+
+
+** Analysis setup **
+.tran 0.1ms 20ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Fuente_AC_RC_Vpulse.net"
+
+**** INCLUDING Fuente_AC_RC_Vpulse.net ****
+* Schematics Netlist *
+
+
+
+R_R1         $N_0002 $N_0001  1k  
+C_C1         0 $N_0001  100n  
+V_V         $N_0002 0  
++PULSE 0V 5V 0 1n 1n 5m 10m
+
+**** RESUMING Fuente_AC_RC_Vpulse.cir ****
+.INC "Fuente_AC_RC_Vpulse.als"
+
+
+
+**** INCLUDING Fuente_AC_RC_Vpulse.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R1            R1(1=$N_0002 2=$N_0001 )
+C_C1            C1(1=0 2=$N_0001 )
+V_V             V(+=$N_0002 -=0 )
+.ENDALIASES
+
+
+**** RESUMING Fuente_AC_RC_Vpulse.cir ****
+.probe
+
+
+.END
+
+**** 05/18/23 09:44:25 *********** Evaluation PSpice (Nov 1999) **************
+
+ * E:\Prctica_3\Fuente_AC_RC_Vpulse.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V          0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 05/18/23 09:44:25 *********** Evaluation PSpice (Nov 1999) **************
+
+ * E:\Prctica_3\Fuente_AC_RC_Vpulse.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+**** 05/18/23 09:44:25 *********** Evaluation PSpice (Nov 1999) **************
+
+ * E:\Prctica_3\Fuente_AC_RC_Vpulse.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V          0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .06
+

@@ -1,0 +1,23 @@
+* E:\Práctica_3\Fuente_AC_RLC.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu May 18 10:13:27 2023
+
+
+
+** Analysis setup **
+.ac DEC 101 10 1000K
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Fuente_AC_RLC.net"
+.INC "Fuente_AC_RLC.als"
+
+
+.probe
+
+
+.END

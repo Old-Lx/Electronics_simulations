@@ -1,0 +1,23 @@
+* E:\Práctica_3\Fuente_AC_y_dos_resistencias.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu May 18 09:14:10 2023
+
+
+
+** Analysis setup **
+.tran 0.1ms 1ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Fuente_AC_y_dos_resistencias.net"
+.INC "Fuente_AC_y_dos_resistencias.als"
+
+
+.probe
+
+
+.END
